@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h2>Kalkulator BMI</h2>
+            <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
+            <form id="bmiForm">
+                <label for="gender">Jenis Kelamin</label><br>
+                <input type="radio" id="male" name="gender" value="male" checked> Pria
+                <input type="radio" id="female" name="gender" value="female"> Wanita<br><br>
+                
+                <label for="weight">Berat Badan (kg)</label><br>
+                <input type="number" id="weight" name="weight" required><br><br>
+                
+                <label for="age">Usia (tahun)</label><br>
+                <input type="number" id="age" name="age" required><br><br>
+                
+                <label for="height">Tinggi Badan (cm)</label><br>
+                <input type="number" id="height" name="height" required><br><br>
+                
+                <button type="button" onclick="calculateBMI()">Hitung BMI</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+        <div class="result">
+            <h2>Hasil</h2>
+            <div id="bmiResult">
+                <p>Berat Badan: </p>
+                <br>
+                <span id="bmiValue">-</span>
+                <p id="bmiCategory"></p>
+                <button id="downloadBtn" style="display:none">Download Hasil BMI</button>
+            </div>
+            <div id="suggestion" style="display:none">
+                <p>Hasil BMI diantara 23 dan 25</p>
+                <p>Anda berada dalam kategori overweight atau berat badan berlebih. Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga. Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js.js"></script>
+</html>
